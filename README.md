@@ -1,1 +1,1 @@
-# projects.
+# image gallery projects.
