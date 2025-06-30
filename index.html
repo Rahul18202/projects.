@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Enhanced Image Gallery</h1>
+
+  <!-- Search Bar -->
+  <input type="text" id="searchInput" onkeyup="searchImages()" placeholder="Search by name..." />
+
+  <!-- Tag Filters -->
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <div class="gallery-item nature"><img src="https://picsum.photos/id/1018/300" alt="Mountain View" onclick="openLightbox(0)"></div>
+    <div class="gallery-item city"><img src="https://picsum.photos/id/1020/300" alt="Urban Night" onclick="openLightbox(1)"></div>
+    <div class="gallery-item animals"><img src="https://picsum.photos/id/1025/300" alt="Wild Deer" onclick="openLightbox(2)"></div>
+    <div class="gallery-item nature"><img src="https://picsum.photos/id/1035/300" alt="Forest Path" onclick="openLightbox(3)"></div>
+    <div class="gallery-item city"><img src="https://picsum.photos/id/1043/300" alt="City Bridge" onclick="openLightbox(4)"></div>
+    <div class="gallery-item animals"><img src="https://picsum.photos/id/1062/300" alt="Elephant" onclick="openLightbox(5)"></div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
